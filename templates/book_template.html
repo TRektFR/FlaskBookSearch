@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>API book</title>
+    <title>API book search</title>
 </head>
 
 <body>
-    {{ book.title }}<br>
-    <img src="{{book.thumbnailUrl}}"/><br>
-    {% for author in book.authors %}
+    {{ b.title }}<br>
+    <img src="{{b.thumbnailUrl}}"/><br>
+    {% for author in b.authors %}
         {{ author }}<br>
     {% endfor %}
 </body>
