@@ -15,7 +15,7 @@ def bookIsbn(isbn):
     book = None
     for book in books:
         if isbn == book['isbn']:
-            return render_template("book_template.html", book=book),200
+            return render_template("book_template.html", b=book),200
     return jsonify("book"),404
 
 @app.route('/api/search/title/<title>', methods=['GET'])
@@ -23,9 +23,9 @@ def bookTitle(title):
     book = None
     for book in books:
         if title == book['title']:
-            return render_template("book_template.html", book=book), 200
+            return render_template("book_template.html", b=book), 200
     return jsonify(None), 404
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
-# this is a commentary to try volumes it doesn't work
+# this is a commentary to try volumes and it doesn't work
